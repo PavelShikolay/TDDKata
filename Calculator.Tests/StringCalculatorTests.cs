@@ -9,6 +9,7 @@ namespace Calculator.Tests
     {
         [TestCase("", ExpectedResult = 0)]
         [TestCase("1", ExpectedResult = 1)]
+        [TestCase("1, 2", ExpectedResult = 3)]
         [Test]
         public int Add_NumbersString_SumOfNumbers(string numbers)
         {

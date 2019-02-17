@@ -12,7 +12,16 @@ namespace Calculator
                 return 0;
             }
 
-            return Int32.Parse(numbers);
+            string[] numbersArray = numbers.Split(',');
+
+            int result = 0;
+           
+            foreach (var number in numbersArray)
+            {
+                result += Int32.Parse(number);
+            }
+
+            return result;
         }
     }
 }
