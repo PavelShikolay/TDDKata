@@ -3,3 +3,4 @@ G:\Книги\EpamLab\Projects\TDDKata\Calculator\bin\Debug\Calculator.dll
 G:\Книги\EpamLab\Projects\TDDKata\Calculator\bin\Debug\Calculator.pdb
 G:\Книги\EpamLab\Projects\TDDKata\Calculator\obj\Debug\Calculator.dll
 G:\Книги\EpamLab\Projects\TDDKata\Calculator\obj\Debug\Calculator.pdb
+G:\Книги\EpamLab\Projects\TDDKata\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache

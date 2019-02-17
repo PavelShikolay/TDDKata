@@ -18,5 +18,13 @@ namespace Calculator.Tests
         {
             return StringCalculator.Add(numbers);
         }
+
+        [Test]
+        public void Add_NegativeNumbersString_ThrowsArgumentException()
+        {
+            string numbers = "-1,2\n-4";
+            var exception = Assert.Throws<ArgumentException>(() => StringCalculator.Add(numbers));
+            Assert.AreEqual("Negatives not allowed -1 -4", exception.Message);
+        }
     }
 }

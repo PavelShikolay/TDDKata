@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Calculator
 {
@@ -20,6 +21,11 @@ namespace Calculator
             }
 
             string[] numbersArray = numbers.Replace('\n', ',').Split(',');
+
+            if (numbersArray.Any(x => int.Parse(x) < 0))
+            {
+                throw new ArgumentException("Negatives not allowed " + string.Join(" ", numbersArray.Where(x => int.Parse(x) < 0)));
+            }
 
             int result = 0;
 
