@@ -12,7 +12,7 @@ namespace Calculator
                 return 0;
             }
 
-            string[] numbersArray = numbers.Split(',');
+            string[] numbersArray = numbers.Split(',', '\n');
 
             int result = 0;
            
