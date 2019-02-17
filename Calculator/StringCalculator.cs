@@ -12,16 +12,26 @@ namespace Calculator
                 return 0;
             }
 
-            string[] numbersArray = numbers.Split(',', '\n');
+            if (numbers.StartsWith("//"))
+            {
+                numbers = numbers.Remove(0, 2);
+                var delimiter = numbers[0];
+                numbers = numbers.Remove(0, 1).Replace(delimiter, ',');
+            }
+
+            string[] numbersArray = numbers.Replace('\n', ',').Split(',');
 
             int result = 0;
-           
+
             foreach (var number in numbersArray)
             {
-                result += Int32.Parse(number);
+                if (!(number == string.Empty))
+                {
+                    result += int.Parse(number);
+                }
             }
 
             return result;
-        }
+        }      
     }
 }
